@@ -38,11 +38,12 @@ export default function GunlukHadis(){
     }
     else{
         return (
-            <div className={styles.toolDiv}>
-                <span>{selectedHadis ? selectedHadis.text :  "Yükleniyor..."}</span>
+            <div className={styles.dailyHadis}>
+                <span className={styles.dailyHadisTitle}>Günün Hadisi</span>
+                <span className={styles.selectedHadis}>{selectedHadis ? selectedHadis.text :  "Yükleniyor..."}</span>
                 <br></br>
                 <br></br>
-                <span>Hadis Numarası: {selectedHadis ? selectedHadis.hadithnumber :  "Yükleniyor..."} Kitap: {hadisler.metadata ? hadisler.metadata.name : "Yükleniyor..."}</span>
+                <span className={styles.selectedHadisNo}>Hadis Numarası: {selectedHadis ? selectedHadis.hadithnumber :  "Yükleniyor..."} Kitap: {hadisler.metadata ? hadisler.metadata.name : "Yükleniyor..."}</span>
             </div>
         )
     }

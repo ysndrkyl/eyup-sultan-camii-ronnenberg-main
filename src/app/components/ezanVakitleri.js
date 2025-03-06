@@ -31,7 +31,7 @@ export default function ezanVakitleri(){
     }
     else{
         return (
-            <>
+            <div className={styles.ezanVakitleri}>
                 <div className={styles.toolDiv}>
                     {vakitler.length !== 0 ? vakitler.find(vakit => vakit.MiladiTarihKisa == new Date().toLocaleDateString("tr-TR")).Imsak : "Yükleniyor..."}
                 </div>
@@ -55,7 +55,7 @@ export default function ezanVakitleri(){
                 <div className={styles.toolDiv}>
                     {vakitler.length !== 0 ? vakitler.find(vakit => vakit.MiladiTarihKisa == new Date().toLocaleDateString("tr-TR")).Yatsi : "Yükleniyor..."}
                 </div>
-            </>
+            </div>
         )
     }
 }
